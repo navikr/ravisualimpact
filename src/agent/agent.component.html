@@ -1,0 +1,15 @@
+<form class="form-horizontal">
+  <div class="form-group">
+      <label for="inputlg">Node Snippet</label>
+    <textarea class="form-control" rows="10" id="inputlg" [ngModelOptions]="{standalone:true}" [(ngModel)]='nodeValue'></textarea>
+  </div>
+  <button type="submit" class="btn btn-default" (click)="createNodeMap()">Submit</button>
+</form>
+<table style="border:1px;">
+      <tr *ngFor="let key of keys();">
+            <td>{{key}}</td>
+            <td>{{this.nodeMap[key].nodeHost}}</td>
+            <td>{{this.nodeMap[key].nodeVersion}}      </td>
+            </tr>
+</table>
+<div id="chart_div"></div>
